@@ -1,20 +1,22 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
         
         System.out.println("Sistema de Alugel de veiculos Não testamos isso");
 
-        Bicicleta bicicleta = new Bicicleta("Mountain Bike", "Caloi", "123456");
+        List<Veiculo> veiculos = new ArrayList<>();
 
-        Carro carro = new Carro("UNO", "Fiat", "MHD10823", 4);
+        veiculos.add(new Bicicleta("Mountain Bike", "Caloi", "123456"));
+        veiculos.add(new Carro("UNO", "Fiat", "MHD10823", 4));
+        veiculos.add(new Moto("Sahara 300", "Honda", "DHJ2123"));
 
-        Moto moto = new Moto("Sahara 300", "Honda", "DHJ2123");
 
         
-        carro.contratoAluguel(10);
-
-        moto.contratoAluguel(10);
-
-        bicicleta.contratoAluguel(3);
+        for (Veiculo veiculo : veiculos) {
+            veiculo.contratoAluguel(20);
+        }
 
     }
 }
