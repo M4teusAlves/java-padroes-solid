@@ -5,8 +5,8 @@ public class Carro extends Veiculo{
     private int numeroPortas;
 
     public Carro(String modelo, String marca, String placa, int numeroPortas) {
-        super(modelo, marca);
-        this.placa = placa;
+        super.modelo = modelo;
+        super.marca = marca;
         this.numeroPortas = numeroPortas;
     }
 
@@ -34,8 +34,8 @@ public class Carro extends Veiculo{
     public void contratoAluguel(int dias){
         System.out.println("\n\nDetalhes do contrato:");
         System.out.println("\nCarro alugado:");
-        System.out.println("\n- Marca: " + super.getMarca());
-        System.out.println("\n- Modelo: " + super.getModelo());
+        System.out.println("\n- Marca: " + super.marca);
+        System.out.println("\n- Modelo: " + super.modelo);
         System.out.println("\n- Placa: " + this.placa);
         System.out.println("\n- Numero de portas: " + this.numeroPortas + "portas");
         System.out.println("\nDuração do aluguel: " + dias + " dias");

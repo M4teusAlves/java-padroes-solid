@@ -1,37 +1,7 @@
-public class Veiculo {
-    private String modelo;
-    private String marca;
-
-    
-
-    public Veiculo(String modelo, String marca) {
-        this.modelo = modelo;
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
+abstract class Veiculo {
+    protected String modelo;
+    protected String marca;
 
 
-
-    public String getMarca() {
-        return marca;
-    }
-
-
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-
-
-    public void contratoAluguel(int dias){
-        System.out.println("Contrato genérico");
-    }
+    abstract void contratoAluguel(int dias);
 }
