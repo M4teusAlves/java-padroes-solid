@@ -2,22 +2,22 @@ public class Aplicacao {
 
     public static void main(String[] args) {
 
-        // Exemplo de uso com conexão Wi-Fi
-        IConexaoInternet conexaoWifi = new ConexaoWiFi("MinhaRede", "senhaSegura");
-        conexaoWifi.conectar();
-        conexaoWifi.verificarStatusConexao();
+        Computador computador1 = new Computador(new ConexaoWiFi("MinhaRede", "senhaSegura"));
+
+        Computador computador2 = new Computador(new ConexaoEthernet());
+
+        // Exemplo de uso com conexão Wifi
+        computador1.conectar();;
         
         System.out.println("\n");
 
         // Exemplo de uso com conexão Ethernet
-        IConexaoInternet conexaoEthernet = new ConexaoEthernet();
-        conexaoEthernet.conectar();
-        conexaoEthernet.verificarStatusConexao();
+        computador2.conectar();;
         
         System.out.println("\n");
 
         // Desconectar ambas as conexões (apenas para demonstração)
-        conexaoWifi.desconectar();
-        conexaoEthernet.desconectar();
+        computador1.desconectar();
+        computador2.desconectar();
     }
 }
