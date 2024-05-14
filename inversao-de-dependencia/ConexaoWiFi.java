@@ -8,6 +8,31 @@ public class ConexaoWiFi implements IConexaoInternet {
         this.senhaRede = senhaRede;
     }
 
+
+    public String getNomeRede() {
+        return nomeRede;
+    }
+
+
+
+    public void setNomeRede(String nomeRede) {
+        this.nomeRede = nomeRede;
+    }
+
+
+
+    public String getSenhaRede() {
+        return senhaRede;
+    }
+
+
+
+    public void setSenhaRede(String senhaRede) {
+        this.senhaRede = senhaRede;
+    }
+
+
+
     @Override
     public void verificarStatusConexao() {
         // Implementar lógica para verificar o status da conexão Wi-Fi
